@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         webURL=getResources().getString(R.string.webUrl);
 
         LoadWebView();
+        //This is a test
     }
 
     private void LoadWebView() {
