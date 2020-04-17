@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".SplashActivity">
+
+
+    <ImageView
+        android:id="@+id/company_logo"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="70dp"
+        android:visibility="gone"
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/splashAnimation"
+        android:layout_width="match_parent"
+        app:lottie_fileName="ecom.json"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="visible"
+        android:layout_centerInParent="true"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+
+        />
+
+
+
+    <ProgressBar
+        android:id="@+id/progress1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@+id/splashAnimation"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:outlineAmbientShadowColor="@color/colorAccent"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="bottom|center_horizontal"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:id="@+id/trematrik_logo"
+            android:layout_below="@id/progress1"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:gravity="bottom|center_vertical"
+            android:src="@mipmap/trematrik_icon_round"
+            android:layout_marginTop="0dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/footer1"
+            android:text="@string/app_footer"
+            android:textColor="#ffffff"
+            android:gravity="bottom|center_horizontal"
+            android:layout_marginBottom="0dp"
+            android:layout_below="@id/trematrik_logo"
+            android:textSize="12sp"
+            android:fontFamily="@font/titillium_bold"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/app_version"
+            android:text="@string/app_version"
+            android:textColor="#ffffff"
+            android:gravity="bottom|center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/footer1"
+            android:textSize="10sp"
+            android:fontFamily="@font/titillium_regular"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
